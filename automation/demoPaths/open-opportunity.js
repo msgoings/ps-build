@@ -6,7 +6,7 @@ const allSelectors = listSelectors.concat(layoutSelectors);
 module.exports = async (browser) => {
     const newPage = await browser.newPage();
 
-    await newPage.goto('https://paulnstanley.github.io/');
+    await newPage.goto('https://msgoings.github.io/ps-build');
     await newPage.waitFor(500);
 
     await newPage.evaluate(() => {
