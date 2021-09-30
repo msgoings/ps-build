@@ -103,7 +103,7 @@ if (randNum < 25) {
 
                 // You can add any additional account level key-values here,
                 // as long as it's not one of the above reserved names.
-            }
+            },
             parentAccount: {
                 id:           "Parent" + accountParam || account_id // Highly recommended
                 // name:         // Optional
@@ -115,11 +115,11 @@ if (randNum < 25) {
                 // as long as it's not one of the above reserved names.
             },
 
-        events: {
-          ready: function () {
-          pendo.addBodyMutationListener();
-        }
-      }
+            events: {
+              ready: function () {
+                pendo.addBodyMutationListener();
+              }
+            }
     });
 
     var rcHtml = `
