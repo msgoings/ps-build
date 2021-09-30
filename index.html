@@ -168,7 +168,6 @@ if (randNum < 25) {
 
       // create an observer instance
       var observer = new MutationObserver(function(mutations) {
-        debugger;
         mutations.forEach(function(mutation) {
           if (mutation.addedNodes.length) {
             if (mutation.addedNodes[0].className.includes("_pendo-resource-center-global-container")) {
