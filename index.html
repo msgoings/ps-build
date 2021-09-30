@@ -75,17 +75,46 @@ if (randNum < 25) {
 } else {
     visitor = 'visitor2@' + accString + '.com';
     role = 'read-only';
-}</script><script>!function(i,t,e,n,a){var c,o,d,r,s;for((a=i[n]=i[n]||{})._q=[],o=0,d=(c=["initialize","identify","updateOptions","pageLoad"]).length;o<d;++o)!function(i){a[i]=a[i]||function(){a._q[i===c[0]?"unshift":"push"]([i].concat([].slice.call(arguments,0)))}}(c[o]);(r=t.createElement(e)).async=!0,r.src="https://cdn.pendo.io/agent/static/c6cc37f1-4609-4532-4928-ad53d443c7fa/pendo.js",(s=t.getElementsByTagName(e)[0]).parentNode.insertBefore(r,s)}(window,document,"script","pendo"),
-  pendo.initialize({
-        visitor: {
-          id:       visitorParam || visitor || 'VISITOR-UNIQUE-ID',
-          role:     role || 'user'
-        },
-     
-        account: {
-          id:       accountParam || account_id
-        },
-        
+}</script><script>(function(apiKey){
+    (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+    v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+        o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+        y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+
+        // Call this whenever information about your visitors becomes available
+        // Please use Strings, Numbers, or Bools for value types.
+        pendo.initialize({
+            visitor: {
+                id:              visitorParam || visitor || 'VISITOR-UNIQUE-ID',   // Required if user is logged in
+                // email:        // Optional
+                role:            role || 'user'
+
+                // You can add any additional visitor level key-values here,
+                // as long as it's not one of the above reserved names.
+            },
+
+            account: {
+                id:           accountParam || account_id // Highly recommended
+                // name:         // Optional
+                // planLevel:    // Optional
+                // planPrice:    // Optional
+                // creationDate: // Optional
+
+                // You can add any additional account level key-values here,
+                // as long as it's not one of the above reserved names.
+            }
+            parentAccount: {
+                id:           "Parent" + accountParam || account_id // Highly recommended
+                // name:         // Optional
+                // planLevel:    // Optional
+                // planPrice:    // Optional
+                // creationDate: // Optional
+
+                // You can add any additional account level key-values here,
+                // as long as it's not one of the above reserved names.
+            },
+
         events: {
           ready: function () {
           pendo.addBodyMutationListener();
@@ -102,7 +131,7 @@ if (randNum < 25) {
         </div>
         <div class="citrix-rc_rc-nav">
           <div class="citrix-rc_rc-nav-item" title="What's New">
-            "What's New"
+            What's New
           </div>
           <div class="citrix-rc_rc-nav-item" title="Get Started">
             Get Started
@@ -111,15 +140,15 @@ if (randNum < 25) {
             Search Articles
           </div>
         </div>
-          
+
         <div id="citrix-rc_rc-close-button">×</div>
       </div>
-        
-      <!-- RC HOME VIEW / Get Started --> 
+
+      <!-- RC HOME VIEW / Get Started -->
       <div class="citrix-rc_rc-home-view citrix-rc_pendo-visible">
         <div id="citrix-rc_rc-content-pane"></div>
       </div>
-            
+
       <!-- Whats New Divider -->
       <div class="citrix-rc_rc-whats-new-divider citrix-rc_pendo-invisible"></div>
     </div>
@@ -143,8 +172,8 @@ if (randNum < 25) {
           if (mutation.addedNodes.length) {
             if (mutation.addedNodes[0].className.includes("_pendo-resource-center-global-container")) {
               document.getElementById("citrix-rc_foreground").classList.remove("citrix-rc_pendo-invisible");
-              document.getElementById("citrix-rc_resource-center-container").classList.remove("citrix-rc_pendo-invisible"); 
-              pendo.dom("#citrix-rc_resource-center-container")[0].classList.remove("citrix-rc_slide-right"); 
+              document.getElementById("citrix-rc_resource-center-container").classList.remove("citrix-rc_pendo-invisible");
+              pendo.dom("#citrix-rc_resource-center-container")[0].classList.remove("citrix-rc_slide-right");
 
               document.getElementById("citrix-rc_rc-close-button").addEventListener('click', function(){
                 document.getElementById("citrix-rc_resource-center-container").classList.add("citrix-rc_slide-right");
@@ -152,7 +181,7 @@ if (randNum < 25) {
                 setTimeout(function() {
                     pendo.BuildingBlocks.BuildingBlockResourceCenter.dismissResourceCenter();
                     document.getElementById("citrix-rc_resource-center-container").classList.add("citrix-rc_pendo-invisible");
-                }, 400);      
+                }, 400);
               });
 
               if(!pendo.citrixRcTabListeners){
@@ -171,15 +200,15 @@ if (randNum < 25) {
                 function setNewContent(item) {
                   if(item.title == "What's New") {
                     pendo.BuildingBlocks.BuildingBlockResourceCenter.dismissResourceCenter()
-                    pendo.showGuideById("KGeV-10UoHc5SvHCJDymxQDQWuCGI@BTIcbvEW8QH0iLdlf3T5AofjsRQ");
+                    pendo.showGuideById("uWUifM6DK5KJo5Bjh1PgzIHyczY");
                   }
                   if(item.title == "Get Started") {
                     pendo.BuildingBlocks.BuildingBlockResourceCenter.dismissResourceCenter()
-                    pendo.showGuideById("hjA5KBDSAU9GsVzo59d5hRvu3PE@BTIcbvEW8QH0iLdlf3T5AofjsRQ");
+                    pendo.showGuideById("1GRdtzSXswdV-A0s2XpMaqHlHjI@1Nkst-cDrZ5L_-g6oXzJqiZyoWA");
                   }
                   if(item.title == "Search Articles") {
                     pendo.BuildingBlocks.BuildingBlockResourceCenter.dismissResourceCenter()
-                    pendo.showGuideById("");
+                    pendo.showGuideById("PER0-b51D00filyDT3JyRpUQoRE");
                   }
                 }
 
@@ -211,4 +240,5 @@ if (randNum < 25) {
       };
 
       observer.observe(target, config);
-    </script><title>Pendo Experience</title><link href="/ps-build/static/css/main.7c93a296.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script type="text/javascript" src="/ps-build/static/js/main.e86cc4ac.js"></script></body></html>
+    }
+})('c6cc37f1-4609-4532-4928-ad53d443c7fa');</script><title>Pendo Experience</title><link href="/ps-build/static/css/main.7c93a296.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script type="text/javascript" src="/ps-build/static/js/main.aa029c2c.js"></script></body></html>
