@@ -129,16 +129,16 @@ if (randNum < 25) {
   <div class="rc-header-section">
     <div class="rc-main-nav">
       <div class="rc-main-nav-items">
-        <div class="_adobe-rc_rc-nav-item _adobe-rc_active-nav-item" data-id="guides">
+        <div class="_adobe-rc_rc-nav-item _adobe-rc_active-nav-item" data-id="guides" title="Guides">
           Guides
         </div>
-        <div class="_adobe-rc_rc-nav-item" data-id="docs">
+        <div class="_adobe-rc_rc-nav-item" data-id="docs" title="Docs">
           Product Docs
         </div>
-        <div class="_adobe-rc_rc-nav-item" data-id="whatsnew">
+        <div class="_adobe-rc_rc-nav-item" data-id="whatsnew" title="What's New">
           What's New
         </div>
-        <div class="_adobe-rc_rc-nav-item" data-id="resources">
+        <div class="_adobe-rc_rc-nav-item" data-id="resources" title="Resources">
           Additional Resources
         </div>
       </div>
@@ -162,7 +162,7 @@ if (randNum < 25) {
         </div>
 
         <div class="rc-section-default-view" data-id="guides-default">
-          <div class="rc-section-guide-tile" data-id="guides-tile-1" onclick="handleTileClick(event)">
+          <!-- <div class="rc-section-guide-tile" data-id="guides-tile-1" onclick="handleTileClick(event)">
             Beginner
           </div>
           <div class="rc-section-guide-tile" data-id="guides-tile-2" onclick="handleTileClick(event)">
@@ -170,7 +170,7 @@ if (randNum < 25) {
           </div>
           <div class="rc-section-guide-tile" data-id="guides-tile-3" onclick="handleTileClick(event)">
             Advanced
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -227,19 +227,19 @@ if (randNum < 25) {
 
                 // Quick function to show tab functionality
                 function setNewContent(item) {
-                  if(item.data-id == "guides") {
+                  if(item.title == "Guides") {
                     pendo.BuildingBlocks.BuildingBlockResourceCenter.dismissResourceCenter()
                     pendo.showGuideById("hjA5KBDSAU9GsVzo59d5hRvu3PE@BTIcbvEW8QH0iLdlf3T5AofjsRQ");
                   }
-                  if(item.data-id == "docs") {
+                  if(item.title == "Docs") {
                     pendo.BuildingBlocks.BuildingBlockResourceCenter.dismissResourceCenter()
                     pendo.showGuideById("GUIDE_ID_FOR_GETSTARTED_MODULE");
                   }
-                  if(item.data-id == "whatsnew") {
+                  if(item.title == "What's New") {
                     pendo.BuildingBlocks.BuildingBlockResourceCenter.dismissResourceCenter()
                     pendo.showGuideById("Wtmwujzqa4lX2TkwQ_L311zNceI@BTIcbvEW8QH0iLdlf3T5AofjsRQ");
                   }
-                  if(item.data-id == "resources") {
+                  if(item.title == "Resources") {
                     pendo.BuildingBlocks.BuildingBlockResourceCenter.dismissResourceCenter()
                     pendo.showGuideById("GUIDE_ID_FOR_SEARCHARTICLES_MODULE");
                   }
