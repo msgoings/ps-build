@@ -124,27 +124,26 @@ if (randNum < 25) {
 
     var rcHtml = `
     <div id="_adobe-rc_resource-center-container" class="rc-container _adobe-rc_slide-right _adobe-rc_pendo-invisible">
-
 <!-- RC HEADER -->
   <div class="rc-header-section">
     <div class="rc-main-nav">
       <div class="rc-main-nav-items">
-        <div class="_adobe-rc_rc-nav-item _adobe-rc_active-nav-item" data-id="guides">
+        <div class="_adobe-rc_rc-nav-item _adobe-rc_active-nav-item" data-id="guides" title="Guides">
           Guides
         </div>
-        <div class="_adobe-rc_rc-nav-item" data-id="docs">
+        <div class="_adobe-rc_rc-nav-item" data-id="docs" title="Docs">
           Product Docs
         </div>
-        <div class="_adobe-rc_rc-nav-item" data-id="whatsnew">
+        <div class="_adobe-rc_rc-nav-item" data-id="whatsnew" title="What's New">
           What's New
         </div>
-        <div class="_adobe-rc_rc-nav-item" data-id="resources">
+        <div class="_adobe-rc_rc-nav-item" data-id="resources" title="Resources">
           Additional Resources
         </div>
+        <div id="_adobe-rc_rc-close-button">×</div>
       </div>
     </div>
   </div>
-
 <!-- RC HOME VIEW / Get Started -->
   <div class="rc-content-container">
     <div class="rc-content-section visible" data-id="guides">
@@ -154,28 +153,11 @@ if (randNum < 25) {
           <input id="rc-section-search-input" class="rc-search" placeholder="Search guides"/>
         </form>
       </div>
-
       <div id="_adobe-rc_rc-content-pane" class="rc-section-content-window">
-        <div class="rc-section-search-results" data-id="guide-search">
-
-        </div>
-
-        <div class="rc-section-default-view" data-id="guides-default">
-          <div class="rc-section-guide-tile" data-id="guides-tile-1" onclick="handleTileClick(event)">
-            Beginner
-          </div>
-          <div class="rc-section-guide-tile" data-id="guides-tile-2" onclick="handleTileClick(event)">
-            Intermediate
-          </div>
-          <div class="rc-section-guide-tile" data-id="guides-tile-3" onclick="handleTileClick(event)">
-            Advanced
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </div>
-
 <div id="log"></div>
 <!-- Whats New Divider -->
       <div class="_adobe-rc_rc-whats-new-divider _adobe-rc_pendo-invisible"></div>
