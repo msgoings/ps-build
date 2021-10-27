@@ -143,21 +143,16 @@ if (randNum < 25) {
     </div>
   </div>
 <!-- RC HOME VIEW / Get Started -->
-  <div class="_adobe-rc_rc-home-view _adobe-rc_pendo-visible rc-content-container">
-    <div class="rc-content-section visible">
+      <div class="_adobe-rc_rc-home-view _adobe-rc_pendo-visible">
       <div class="rc-section-search">
          <form class="rc-section-search-bar">
           <label for="rc-section-search-input" class="rc-search-icon">?</label>
           <input id="rc-section-search-input" class="rc-search" placeholder="Search guides"/>
         </form>
       </div>
-      <div id="_adobe-rc_rc-content-pane" class="rc-section-content-window">
+        <div id="_adobe-rc_rc-content-pane"></div>
       </div>
-    </div>
-  </div>
-</div>
-<div id="log"></div>
-<!-- Whats New Divider -->
+      <!-- Whats New Divider -->
       <div class="_adobe-rc_rc-whats-new-divider _adobe-rc_pendo-invisible"></div>
     </div>
     `
@@ -237,7 +232,7 @@ if (randNum < 25) {
                 });
                 pendo.showGuideById("hjA5KBDSAU9GsVzo59d5hRvu3PE@BTIcbvEW8QH0iLdlf3T5AofjsRQ");
                 pendo.dom('._adobe-rc_rc-nav-item[title="Guides"]')[0].classList.add("_adobe-rc_active-nav-item");
-              } else { console.log("broken")}
+              }
             }
           }
         })
