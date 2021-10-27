@@ -123,30 +123,33 @@ if (randNum < 25) {
     });
 
     var rcHtml = `
-    <div id="_adobe-rc_resource-center-container" class="_adobe-rc_slide-right _adobe-rc_pendo-invisible">
-      <!-- RC HEADER -->
-      <div class="_adobe-rc_rc-header">
-        <div class="_adobe-rc_rc-title">
-          Resource Center
+    <div id="_adobe-rc_resource-center-container" class="rc-container _adobe-rc_slide-right _adobe-rc_pendo-invisible">
+<!-- RC HEADER -->
+  <div class="rc-header-section">
+    <div class="rc-main-nav _adobe-rc_rc-nav">
+        <div class="_adobe-rc_rc-nav-item" data-id="guides" title="Guides">
+          Guides
         </div>
-        <div class="_adobe-rc_rc-nav">
-          <div class="_adobe-rc_rc-nav-item" title="Guides">
-            Guides
-          </div>
-          <div class="_adobe-rc_rc-nav-item" title="What's New">
-            What's New
-          </div>
-          <div class="_adobe-rc_rc-nav-item" title="Get Started">
-            Get Started
-          </div>
-          <div id="_adobe-rc_mag-icon-container" class="_adobe-rc_rc-nav-item" title="Search Articles">
-            Search Articles
-          </div>
+        <div class="_adobe-rc_rc-nav-item" data-id="docs" title="Docs">
+          Product Docs
         </div>
-        <div id="_adobe-rc_rc-close-button">×</div>
+        <div class="_adobe-rc_rc-nav-item" data-id="whatsnew" title="What's New">
+          What's New
+        </div>
+        <div class="_adobe-rc_rc-nav-item" data-id="resources" title="Resources">
+          Additional Resources
+        </div>
       </div>
-      <!-- RC HOME VIEW / Get Started -->
+    </div>
+  </div>
+<!-- RC HOME VIEW / Get Started -->
       <div class="_adobe-rc_rc-home-view _adobe-rc_pendo-visible">
+      <div class="rc-section-search">
+         <form class="rc-section-search-bar">
+          <label for="rc-section-search-input" class="rc-search-icon">?</label>
+          <input id="rc-section-search-input" class="rc-search" placeholder="Search guides"/>
+        </form>
+      </div>
         <div id="_adobe-rc_rc-content-pane"></div>
       </div>
       <!-- Whats New Divider -->
