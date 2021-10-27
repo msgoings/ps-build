@@ -127,7 +127,7 @@ if (randNum < 25) {
 <!-- RC HEADER -->
   <div class="rc-header-section">
     <div class="rc-main-nav _adobe-rc_rc-nav">
-        <div class="_adobe-rc_rc-nav-item _adobe-rc_active-nav-item" data-id="guides" title="Guides">
+        <div class="_adobe-rc_rc-nav-item" data-id="guides" title="Guides">
           Guides
         </div>
         <div class="_adobe-rc_rc-nav-item" data-id="docs" title="Docs">
@@ -192,7 +192,7 @@ if (randNum < 25) {
                 }, 400);
               });
 
-              if(!pendo._adobeRcTabListeners){
+              if(!pendo.adobeRcTabListeners){
                 // Adds active class to clicked tabs.  Flushes other active tabs.
                 Array.from(document.getElementsByClassName('_adobe-rc_rc-nav-item')).forEach((item) => {
                   item.addEventListener('click', function(){
@@ -224,7 +224,7 @@ if (randNum < 25) {
                   }
                 }
 
-                pendo._adobeRcTabListeners = true;
+                pendo.adobeRcTabListeners = true;
               }
 
               var rcContainer = mutation.addedNodes[0];
