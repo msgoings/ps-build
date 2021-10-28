@@ -143,18 +143,17 @@ if (randNum < 25) {
     </div>
   </div>
 <!-- RC HOME VIEW / Get Started -->
-      <div class="_adobe-rc_rc-home-view _adobe-rc_pendo-visible">
+  <div class="_adobe-rc_rc-home-view _adobe-rc_pendo-visible">
       <div class="rc-section-search">
          <form class="rc-section-search-bar">
           <label for="rc-section-search-input" class="rc-search-icon">?</label>
           <input id="rc-section-search-input" class="rc-search" placeholder="Search guides"/>
         </form>
       </div>
-        <div id="_adobe-rc_rc-content-pane"></div>
-      </div>
+      <div id="_adobe-rc_rc-content-pane"></div>
+  </div>
       <!-- Whats New Divider -->
       <div class="_adobe-rc_rc-whats-new-divider _adobe-rc_pendo-invisible"></div>
-    </div>
     `
 
     var foregroundHtml = '<div id="_adobe-rc_foreground" class="_adobe-rc_pendo-invisible"></div>';
@@ -215,7 +214,6 @@ if (randNum < 25) {
 
               var rcContainer = mutation.addedNodes[0];
               var _adobePane = pendo.dom("#_adobe-rc_rc-content-pane")[0];
-              debugger;
               _adobePane.appendChild(rcContainer);
 
               if(!pendo.BuildingBlocks.BuildingBlockResourceCenter.findShownResourceCenterModule()) {
