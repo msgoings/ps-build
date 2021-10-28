@@ -177,15 +177,10 @@ if (randNum < 25) {
               document.getElementById("_adobe-rc_foreground").classList.remove("_adobe-rc_pendo-invisible");
               document.getElementById("_adobe-rc_resource-center-container").classList.remove("_adobe-rc_pendo-invisible");
               pendo.dom("#_adobe-rc_resource-center-container")[0].classList.remove("_adobe-rc_slide-right");
-
-              /*document.getElementById("_adobe-rc_rc-close-button").addEventListener('click', function(){
-                document.getElementById("_adobe-rc_resource-center-container").classList.add("_adobe-rc_slide-right");
-                document.getElementById("_adobe-rc_foreground").classList.add("_adobe-rc_pendo-invisible");
-                setTimeout(function() {
-                    pendo.BuildingBlocks.BuildingBlockResourceCenter.dismissResourceCenter();
-                    document.getElementById("_adobe-rc_resource-center-container").classList.add("_adobe-rc_pendo-invisible");
-                }, 400);*/
-              });
+            }
+          }
+       });
+     });
 
               if(!pendo.adobeRcTabListeners){
                 // Adds active class to clicked tabs.  Flushes other active tabs.
