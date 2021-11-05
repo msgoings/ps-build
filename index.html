@@ -158,25 +158,25 @@ if (randNum < 25) {
 
     var foregroundHtml = '<div id="_adobe-rc_foreground" class="_adobe-rc_pendo-invisible"></div>';
     var showAdobeRC = function() {
-      var adobeRC = document.getElementsByID("_adobe-rc_resource-center-container");
+      var adobeRC = document.getElementByID("_adobe-rc_resource-center-container");
       adobeRC.classList.add("visible");
       adobeRC.classList.remove("hidden");
     };
     var hideAdobeRC = function() {
-      var adobeRC = document.getElementsByID("_adobe-rc_resource-center-container");
+      var adobeRC = document.getElementByID("_adobe-rc_resource-center-container");
       adobeRC.classList.add("visible");
       adobeRC.classList.remove("hidden");
     };
     var showSearch = function() {
       var searchBar = document.getElementsByClassName("rc-section-search")[0];
-      var contentPane = document.getElementsByID("_adobe-rc_rc-content-pane");
+      var contentPane = document.getElementByID("_adobe-rc_rc-content-pane");
       searchBar.classList.add("visible");
       searchBar.classList.remove("hidden");
       contentPane.classList.remove("hideMargin");
     };
     var hideSearch = function() {
       var searchBar = document.getElementsByClassName("rc-section-search")[0];
-      var contentPane = document.getElementsByID("_adobe-rc_rc-content-pane");
+      var contentPane = document.getElementByID("_adobe-rc_rc-content-pane");
       searchBar.classList.add("hidden");
       contentPane.classList.add("hideMargin");
       searchBar.classList.remove("visible");
