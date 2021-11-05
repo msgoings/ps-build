@@ -131,13 +131,13 @@ if (randNum < 25) {
           Guides
         </div>
         <div class="_adobe-rc_rc-nav-item" data-id="docs" title="Docs">
-          Product Docs
+          Docs & Community
         </div>
         <div class="_adobe-rc_rc-nav-item" data-id="whatsnew" title="What's New">
           What's New
         </div>
         <div class="_adobe-rc_rc-nav-item" data-id="resources" title="Resources">
-          Additional Resources
+          Resources
         </div>
       </div>
     </div>
@@ -157,6 +157,23 @@ if (randNum < 25) {
     `
 
     var foregroundHtml = '<div id="_adobe-rc_foreground" class="_adobe-rc_pendo-invisible"></div>';
+    var searchBar = document.getElementsByClassName("rc-section-search")[0];
+    var showAdobeRC = function() {
+      searchBar.classList.add("visible");
+      searchBar.classList.remove("hidden");
+    };
+    var hideAdobeRC = function() {
+      searchBar.classList.add("visible");
+      searchBar.classList.remove("hidden");
+    };
+    var showSearch = function() {
+      searchBar.classList.add("visible");
+      searchBar.classList.remove("hidden");
+    };
+    var hideSearch = function() {
+      searchBar.classList.add("hidden");
+      searchBar.classList.remove("visible");
+    };
 
     pendo.addBodyMutationListener = function() {
       var rcWrapper = document.createElement("div");
@@ -193,18 +210,22 @@ if (randNum < 25) {
                 function setNewContent(item) {
                   if(item.title == "Guides") {
                     pendo.BuildingBlocks.BuildingBlockResourceCenter.dismissResourceCenter()
+                    showSearch;
                     pendo.showGuideById("hjA5KBDSAU9GsVzo59d5hRvu3PE@BTIcbvEW8QH0iLdlf3T5AofjsRQ");
                   }
                   if(item.title == "Docs") {
                     pendo.BuildingBlocks.BuildingBlockResourceCenter.dismissResourceCenter()
+                    hideSearch;
                     pendo.showGuideById("60naNKjlM2Pv3jVMqchdqU17OWE@BTIcbvEW8QH0iLdlf3T5AofjsRQ");
                   }
                   if(item.title == "What's New") {
                     pendo.BuildingBlocks.BuildingBlockResourceCenter.dismissResourceCenter()
+                    hideSearch;
                     pendo.showGuideById("Wtmwujzqa4lX2TkwQ_L311zNceI@BTIcbvEW8QH0iLdlf3T5AofjsRQ");
                   }
                   if(item.title == "Resources") {
                     pendo.BuildingBlocks.BuildingBlockResourceCenter.dismissResourceCenter()
+                    hideSearch;
                     pendo.showGuideById("KGeV0UoHc5SvHCJDymxQDQWuCGI@BTIcbvEW8QH0iLdlf3T5AofjsRQ");
                   }
                 }
