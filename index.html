@@ -156,7 +156,6 @@ if (randNum < 25) {
     </div>
     `
 
-    var foregroundHtml = '<div id="_adobe-rc_foreground" class="_adobe-rc_pendo-invisible"></div>';
     var showAdobeRC = function() {
       var adobeRC = document.getElementById("_adobe-rc_resource-center-container");
       adobeRC.classList.add("visible");
@@ -184,9 +183,7 @@ if (randNum < 25) {
 
     pendo.addBodyMutationListener = function() {
       var rcWrapper = document.createElement("div");
-      var foregroundNode = document.createElement("div");
       rcWrapper.innerHTML = rcHtml;
-      foregroundNode.innerHTML = foregroundHtml;
 
       var target = document.querySelector('body');
       target.appendChild(rcWrapper.firstElementChild);
@@ -197,7 +194,6 @@ if (randNum < 25) {
         mutations.forEach(function(mutation) {
           if (mutation.addedNodes.length) {
             if (mutation.addedNodes[0].className.includes("_pendo-resource-center-global-container")) {
-              document.getElementById("_adobe-rc_foreground").classList.remove("_adobe-rc_pendo-invisible");
               document.getElementById("_adobe-rc_resource-center-container").classList.remove("_adobe-rc_pendo-invisible");
               pendo.dom("#_adobe-rc_resource-center-container")[0].classList.remove("_adobe-rc_slide-right");
 
