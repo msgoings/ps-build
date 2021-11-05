@@ -157,21 +157,23 @@ if (randNum < 25) {
     `
 
     var foregroundHtml = '<div id="_adobe-rc_foreground" class="_adobe-rc_pendo-invisible"></div>';
-    var searchBar = document.getElementsByClassName("rc-section-search")[0];
-    console.log(searchBar);
     var showAdobeRC = function() {
-      searchBar.classList.add("visible");
-      searchBar.classList.remove("hidden");
+      var adobeRC = document.getElementsByID("_adobe-rc_resource-center-container");
+      adobeRC.classList.add("visible");
+      adobeRC.classList.remove("hidden");
     };
     var hideAdobeRC = function() {
-      searchBar.classList.add("visible");
-      searchBar.classList.remove("hidden");
+      var adobeRC = document.getElementsByID("_adobe-rc_resource-center-container");
+      adobeRC.classList.add("visible");
+      adobeRC.classList.remove("hidden");
     };
     var showSearch = function() {
+      var searchBar = document.getElementsByClassName("rc-section-search")[0];
       searchBar.classList.add("visible");
       searchBar.classList.remove("hidden");
     };
     var hideSearch = function() {
+      var searchBar = document.getElementsByClassName("rc-section-search")[0];
       searchBar.classList.add("hidden");
       searchBar.classList.remove("visible");
     };
