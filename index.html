@@ -169,12 +169,16 @@ if (randNum < 25) {
     };
     var showSearch = function() {
       var searchBar = document.getElementsByClassName("rc-section-search")[0];
+      var contentPane = document.getElementsByID("_adobe-rc_rc-content-pane");
       searchBar.classList.add("visible");
       searchBar.classList.remove("hidden");
+      contentPane.classList.remove("hideMargin");
     };
     var hideSearch = function() {
       var searchBar = document.getElementsByClassName("rc-section-search")[0];
+      var contentPane = document.getElementsByID("_adobe-rc_rc-content-pane");
       searchBar.classList.add("hidden");
+      contentPane.classList.add("hideMargin");
       searchBar.classList.remove("visible");
     };
 
