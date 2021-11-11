@@ -149,7 +149,10 @@ if (randNum < 25) {
           <input id="rc-section-search-input" class="rc-search" placeholder="Search guides"/>
         </form>
       </div>
-      <div id="_adobe-rc_rc-content-pane"></div>
+      <div id="_adobe-rc_rc-content-pane" class="beginner"></div>
+      <div class="intermediate hidden"></div>
+      <div class="advanced hidden"></div>
+      <div class="admin hidden"></div>
   </div>
       <!-- Whats New Divider -->
       <div class="_adobe-rc_rc-whats-new-divider _adobe-rc_pendo-invisible"></div>
@@ -169,14 +172,26 @@ if (randNum < 25) {
     var showSearch = function() {
       var searchBar = document.getElementsByClassName("rc-section-search")[0];
       var contentPane = document.getElementById("_adobe-rc_rc-content-pane");
+      var interContent = document.getElementsByClassName("intermediate")[0];
+      var advContent = document.getElementsByClassName("advanced")[0];
+      var adminContent = document.getElementsByClassName("admin")[0];
       searchBar.classList.add("visible");
       searchBar.classList.remove("hidden");
+      interContent.classList.remove("hidden");
+      advContent.classList.remove("hidden");
+      adminContent.classList.remove("hidden");
       contentPane.classList.remove("hideMargin");
     };
     var hideSearch = function() {
       var searchBar = document.getElementsByClassName("rc-section-search")[0];
       var contentPane = document.getElementById("_adobe-rc_rc-content-pane");
+      var interContent = document.getElementsByClassName("intermediate")[0];
+      var advContent = document.getElementsByClassName("advanced")[0];
+      var adminContent = document.getElementsByClassName("admin")[0];
       searchBar.classList.add("hidden");
+      interContent.classList.add("hidden");
+      advContent.classList.add("hidden");
+      adminContent.classList.add("hidden");
       contentPane.classList.add("hideMargin");
       searchBar.classList.remove("visible");
     };
