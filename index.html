@@ -150,9 +150,9 @@ if (randNum < 25) {
         </form>
       </div>
       <div id="_adobe-rc_rc-content-pane" class="beginner"></div>
-      <div class="intermediate hidden"></div>
-      <div class="advanced hidden"></div>
-      <div class="admin hidden"></div>
+      <div class="intermediate"></div>
+      <div class="advanced"></div>
+      <div class="admin"></div>
   </div>
       <!-- Whats New Divider -->
       <div class="_adobe-rc_rc-whats-new-divider _adobe-rc_pendo-invisible"></div>
@@ -181,6 +181,17 @@ if (randNum < 25) {
       advContent.classList.remove("hidden");
       adminContent.classList.remove("hidden");
       contentPane.classList.remove("hideMargin");
+      pendo.getActiveGuides().forEach(function(guide) {
+        if(guide.name.includes("[ADMIN]") && guide.canShow()){
+          adminContent.innerHTML = "<a href='" + pendo.getURL() + "?pendo=" + guide.id + "'>" + guide.name + "</a>";
+        } else if(guide.name.includes("[BEGINNER]") && guide.canShow()) {
+          contentPane.innerHTML = "<a href='" + pendo.getURL() + "?pendo=" + guide.id + "'>" + guide.name + "</a>";
+        } else if(guide.name.includes("[INTERMEDIATE]") && guide.canShow()) {
+          interContent.innerHTML = "<a href='" + pendo.getURL() + "?pendo=" + guide.id + "'>" + guide.name + "</a>";
+        } else if(guide.name.includes("[ADVANCED]") && guide.canShow()) {
+          advContent.innerHTML = "<a href='" + pendo.getURL() + "?pendo=" + guide.id + "'>" + guide.name + "</a>";
+        }
+      });
     };
     var hideSearch = function() {
       var searchBar = document.getElementsByClassName("rc-section-search")[0];
